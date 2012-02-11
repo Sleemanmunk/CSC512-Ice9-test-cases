@@ -1,11 +1,11 @@
-# random number generator
+# random number generator MISSING ';' at end of line on line 8
 
 # globals
 var Seed, CUTOFF : int;
 
 proc rand(limit: int): int
     Seed := (Seed * 32719 + 3) % CUTOFF;
-    rand := ((Seed % limit) + 1);
+    rand := ((Seed % limit) + 1)
 end
 
 proc roll()
