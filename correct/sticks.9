@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>NC State University : WebAuth : Login Required</title>
+<meta name="viewport" content="width=device-width" />
+<link href="/wrap-inc/classifyDevice.php" rel="stylesheet" type="text/css" />
+</head>
+<body onload="document.affil.login.focus(); document.affil.login.select();">
+    <!-- Begin NCSU branding bar -->
+<div id="ncsu-brand-bar">
+    <link rel="stylesheet" type="text/css" href="https://ssl.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /> 
+    <iframe name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="https://ssl.ncsu.edu/brand/utility-bar/iframe/secure/index.php?color=black&amp;inurl=&amp;center=yes" scrolling="no">  
+    Your browser does not support inline frames or  
+    is currently configured  not to display inline frames.<br />
+    Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.
+    </iframe>
+</div>
+    <!-- End NCSU branding bar -->
+
+<div id="container">
+<div id="header">
+    <div class="logo"></div>
+    <div class="left">
+      <h1>Login Required</h1>
+      <em class="security-help">Please choose an affiliation.</em>
+    </div>   
+    <div class="right"><strong style="font-size:125%"><a href="/wrap-bin/was16.cgi?logout">Logout</a></strong></div>
+</div> 
+
+<div style="clear:both"></div>
+<div id="securityGraphic">
+
+<!-- WAS::StartHTML ends -->
+<div class="security-help">
+<img src="/wrap-bin/stopsign/448e08691cb37fa8f072f4fa69c288" width="400" height="125" 
+ alt="security image missing?" /><br/>
+<a href="https://webauth.ncsu.edu/wrap/whatisthis.html">What is this?</a><br />
+</div>
+<div id="loginBlock">
+<h2>Campus Affiliation</h2>
+<form method="post" action="/wrap-bin/was16.cgi?gosite" enctype="application/x-www-form-urlencoded" name="affil">
+           <label for="WAS_SITE">
+           <p>Please indicate with whom you are affiliated:</p></label>
+<select name="WAS_SITE" >
+<option value="/wrap-bin/was16.cgi?getuser">NC State University</option>
+<option value="https://www.lib.ncsu.edu/proxy/patronauth.html?wascom+/wrap-bin/was16.cgi+152.7.47.192+1328973354">NCSU Libraries Patron</option>
+<option value="/wrap-bin/was16.cgi?guest">Guest Access</option>
+</select><br /><br />
+<input type="submit" name="login" value="Continue Login" /></form></div>
+
+<!-- WAS::MiddleHTML begins -->
+</div>
+<div id="main">
+<!-- WAS::MiddleHTML ends -->
+
+    <p><strong>What is this?</strong><br />
+    WRAP is an authentication system for NC State University faculty, staff and students. It requires you to login using your NC State Unity user ID and password.
+    If you are not an NC State faculty, staff, or student, you can still
+    login using our Guest account. Note, however, that this account has
+    restricted rights.</p>
+    <p><strong>How does this work?</strong><br />
+    WRAP issues an encrypted cookie named WRAP16. Your browser must accept this cookie and pass it
+    to other ncsu.edu webservers for WRAP to work correctly. </p>
+
+    <p><strong>How do I log out?</strong><br />
+    You can remove your WRAP cookie by using the
+    <a href="/wrap-bin/was16.cgi?logout">logout link</a>. Otherwise,
+    your cookie will automatically expire after a certain period of time,
+    or your browser will remove the cookie when you close your session. </p>
+    <p><strong>What if I think this is a scam?</strong><br />
+    We have added a dynamically-generated security image to each of the WRAP login pages, to make it easier for our users to detect fake login sites that are trying to steal the users' password credentials.
+    You can learn more about this image and how to verify that your login is secure by visiting our <a href="https://webauth.ncsu.edu/wrap/whatisthis.html">WRAP information site</a>.<br />
+    It these items do not check out please <em>do not login to this page</em>, and report the site to the <a href="http://help.ncsu.edu">NC State Help Desk</a> at <a href="mailto:help@ncsu.edu">help@ncsu.edu</a>.</p>
+
+
+<!-- WAS::EndHTML begins -->
+</div>
+<div id="footer">
+      <p><a href="https://webauth.ncsu.edu/" target="webAuth">WebAuth</a> is a
+         service is provided by the
+         <a href="http://oit.ncsu.edu/">Office of Information Technology</a>
+         at <a href="http://www.ncsu.edu/">NC State University</a>
+      </p>
+     <div id="oit-logo">
+        <a href="http://oit.ncsu.edu" border="0" target="oit"><img src="/wrap-img/oit.jpg" align="right" alt="Office of Information Technology" /></a>
+     </div>
+</div>
+</body>
+</html>
+
