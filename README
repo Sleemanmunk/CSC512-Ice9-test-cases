@@ -1,1 +1,5 @@
-This repository is separated into two parts - programs that work and programs that have specific errors. Each program with an error should specify that error in a comment at the top.
+EVERYTHING HAS CHANGED
+All tests are now in a "tests" directory
+correct tests and broken tests are separated by a comment on or near their first line describing what they should output.
+There is now a test.py file that can be used to test your compiler. Be sure to open it and read the documentation inside before you use it!
+Let me know if you have any questions or suggestions!
