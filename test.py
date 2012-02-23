@@ -49,6 +49,7 @@ CHECK_ERROR_CONTENTS = True
 from subprocess import Popen, PIPE, STDOUT
 from json import loads as load_json
 import unittest
+import sys
 
 class ICE9Test(unittest.TestCase):
     def __init__(self, fn):
@@ -82,7 +83,10 @@ class ICE9Test(unittest.TestCase):
                     else:
                         words = []
                 for word in words:
-                    self.assertIn(str(word), output)
+					if sys.version_info[0] >= 2.7:
+						self.assertIn(str(word), output)
+					else:
+						self.assertTrue(str(word) in output)
             else:
                 self.fail('Unrecognized test directive ' + repr(line))
         if not seenDirective:
