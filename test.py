@@ -7,7 +7,7 @@
 #
 # This program must be run from the directory where "tests" is. Your compiler
 # will be run like this: (change as necessary)
-COMPILER_EXE = '../P1/ice9.py'
+COMPILER_EXE = '../P1/P1turnin/ice9.py'
 #
 # Your compiler should:
 # - Read the input program from standard input.
@@ -51,6 +51,8 @@ from json import loads as load_json
 import unittest
 import sys
 
+print "Running Python Version " + str(sys.version_info[0]+.1*sys.version_info[1])
+
 class ICE9Test(unittest.TestCase):
     def __init__(self, fn):
         unittest.TestCase.__init__(self)
@@ -83,7 +85,7 @@ class ICE9Test(unittest.TestCase):
                     else:
                         words = []
                 for word in words:
-					if sys.version_info[0] >= 2.7:
+					if sys.version_info[0]+.1*sys.version_info[1] >= 2.7:
 						self.assertIn(str(word), output)
 					else:
 						self.assertTrue(str(word) in output)
