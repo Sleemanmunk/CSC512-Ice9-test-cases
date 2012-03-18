@@ -7,7 +7,8 @@
 #
 # This program must be run from the directory where "tests" is. Your compiler
 # will be run like this: (change as necessary)
-COMPILER_EXE = '../P1/P1turnin/ice9.py'
+COMPILER_EXE = '../P2/ice9.py'
+TEST_DIRECTORY = 'semantictests'
 #
 # Your compiler should:
 # - Read the input program from standard input.
@@ -99,8 +100,10 @@ class ICE9Test(unittest.TestCase):
 
 class FakeLoader(object):
     def loadTestsFromModule(self, *args, **kwargs):
-        import os
-        return unittest.TestSuite(ICE9Test('tests/'+fn) for fn in os.listdir('tests') if fn.endswith('.9') and not fn.startswith('.'))
+		import os
+		return unittest.TestSuite(ICE9Test(TEST_DIRECTORY+'/'+fn) for fn\
+		in os.listdir(TEST_DIRECTORY)\
+		if fn.endswith('.9') and not fn.startswith('.'))
 
 if __name__ == '__main__':
     unittest.main(testLoader = FakeLoader())
